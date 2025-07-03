@@ -3,22 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mon Portfolio</title>
+  <title>Portfolio - Louise Leciak</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: #fff8f0;
+      color: #4b3b4f;
     }
     header {
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin-bottom: 40px;
     }
+    @media(min-width: 600px) {
+      header {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+    header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    header div {
+      text-align: center;
+    }
+    @media(min-width: 600px) {
+      header div {
+        text-align: left;
+      }
+    }
     header h1 {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
+    }
+    header p {
+      margin: 5px 0;
     }
     .project {
       background: white;
@@ -26,19 +52,26 @@
       margin-bottom: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    .project:hover {
+      box-shadow: 0 8px 15px rgba(105, 56, 156, 0.3);
     }
     .project h2 {
       margin-top: 0;
+      color: #6a4c93;
     }
     .project p {
       margin-bottom: 10px;
     }
     .project a {
-      color: #9915aa;
+      color: #6a4c93;
       text-decoration: none;
+      font-weight: bold;
     }
     .project a:hover {
       text-decoration: underline;
+      color: #a178d7;
     }
     footer {
       text-align: center;
@@ -50,17 +83,22 @@
 </head>
 <body>
   <header>
-    <h1>Louise Leciak</h1>
-    <p>Développeur en formation - En recherche de stage</p>
-    <p><a href="https://github.com/LouiseLeciak" target="_blank">Mon GitHub</a> | <a href="mailto:leciak.louise@gmail.com">Contact</a></p>
+    <img src="image.jpg" alt="Photo de Louise" />
+    <div>
+      <h1>Louise Leciak</h1>
+      <p>Développeur en formation - En recherche de stage</p>
+      <p>Passionnée par le code et toujours curieuse d’apprendre de nouvelles technologies.</p>
+      <p><a href="https://github.com/LouiseLeciak" target="_blank" rel="noopener">Mon GitHub</a> | <a href="mailto:leciak.louise@gmail.com">Contact</a></p>
+    </div>
   </header>
 
   <section>
     <article class="project">
       <h2>Minishell - C</h2>
       <p>Coder les bases d'un shell en se basant sur bash.</p>
-      <p><a href="https://github.com/LouiseLeciak/MINISHELL-42" target="_blank">Voir sur GitHub</a></p>
+      <p><a href="https://github.com/LouiseLeciak/MINISHELL-42" target="_blank" rel="noopener">Voir sur GitHub</a></p>
     </article>
+  </section>
 
   <footer>
     &copy; 2025 Louise Leciak
