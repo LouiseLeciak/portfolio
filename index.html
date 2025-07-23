@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 800px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
       background-color: #CEBEBE;
@@ -54,8 +54,21 @@
       margin: 5px 0;
     }
 
-    section h2 {
-      margin-top: 40px;
+    section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    @media(min-width: 900px) {
+      section {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .column h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
       color: #6D2E46;
       border-bottom: 2px solid #ECE2D0;
       padding-bottom: 5px;
@@ -81,6 +94,7 @@
 
     .project p {
       margin-bottom: 10px;
+      color: white;
     }
 
     .project a {
@@ -134,80 +148,70 @@
   </header>
 
   <section>
-    <h2>Projets en C</h2>
+    <!-- Colonne gauche : Projets école -->
+    <div class="column">
+      <h2>Projets École</h2>
 
-    <article class="project">
-      <h2>Minishell - C</h2>
-      <p>Créer un petit shell avec pour modèle bash, permettant la gestion des commandes, redirections et pipelines, avec un focus sur la manipulation des processus et signaux Unix.</p>
-      <p>
-        <a href="https://github.com/LouiseLeciak/MINISHELL-42" target="_blank" rel="noopener">Voir sur GitHub</a>
-      </p>
-    </article>
+      <article class="project">
+        <h2>Minishell - C</h2>
+        <p>Créer un petit shell avec pour modèle bash, permettant la gestion des commandes, redirections et pipelines.</p>
+        <p><a href="https://github.com/LouiseLeciak/MINISHELL-42" target="_blank">Voir sur GitHub</a></p>
+      </article>
 
-    <article class="project">
-      <h2>CUB3D - C</h2>
-      <p>Apprendre à maîtriser la technique du ray casting pour la simulation d’un environnement en 3D dans un espace 2D</p>
-      <p>
-        <a href="https://github.com/LouiseLeciak/CUB3D-42" target="_blank" rel="noopener">Voir sur GitHub</a>
-      </p>
-    </article>
+      <article class="project">
+        <h2>CUB3D - C</h2>
+        <p>Simuler un environnement 3D avec du ray casting dans un espace 2D.</p>
+        <p><a href="https://github.com/LouiseLeciak/CUB3D-42" target="_blank">Voir sur GitHub</a></p>
+      </article>
 
-    <h2>Projets en C++</h2>
+      <article class="project">
+        <h2>ft_irc - C++</h2>
+        <p>Créer un serveur IRC avec gestion des connexions et des commandes.</p>
+        <p><a href="https://github.com/LouiseLeciak/FT_IRC-42" target="_blank">Voir sur GitHub</a></p>
+      </article>
 
-    <article class="project">
-      <h2>ft_irc - C++</h2>
-      <p>Créer un serveur de discussion IRC, gestion des connexions clients et des commandes.</p>
-      <p>
-        <a href="https://github.com/LouiseLeciak/FT_IRC-42" target="_blank" rel="noopener">Voir sur GitHub</a>
-      </p>
-    </article>
+      <article class="project">
+        <h2>PMergeMe - C++</h2>
+        <p>Algorithme de tri Ford-Johnson avec suite de Jacobsthal.</p>
+        <p><a href="https://github.com/LouiseLeciak/PMergeMe" target="_blank">Voir sur GitHub</a></p>
+      </article>
 
-    <article class="project">
-      <h2>PMergeMe - C++</h2>
-      <p>Implémenter l’algorithme de Ford Johnson en utilisant la suite de Jacobsthal pour trier une grande suite de nombres.</p>
-      <p>
-        <a href="https://github.com/LouiseLeciak/PMergeMe" target="_blank" rel="noopener">Voir sur GitHub</a>
-      </p>
-    </article>
+      <article class="project">
+        <h2>Piscine Python - Python</h2>
+        <p>Apprentissage du Python via une série d’exercices orientés data science.</p>
+        <p><a href="https://github.com/LouiseLeciak/PYTHON-FOR-DATASCIENCE-42" target="_blank">Voir sur GitHub</a></p>
+      </article>
 
-    <article class="project">
-      <h2>Multithreading - C++</h2>
-      <p>Utiliser std::thread et std::async pour résoudre des calcules et des sudokus</p>
-      <p>
-        <a href="https://github.com/LouiseLeciak/multithreading" target="_blank" rel="noopener">Voir sur GitHub</a>
-      </p>
-    </article>
+      <article class="project">
+        <h2>libasm - Assembleur</h2>
+        <p>Réimplémentation de fonctions standard C en assembleur x64.</p>
+        <p><a href="https://github.com/LouiseLeciak/LIBASM-42" target="_blank">Voir sur GitHub</a></p>
+      </article>
 
-    <h2>Python</h2>
+      <article class="project">
+        <h2>Inception - Docker</h2>
+        <p>Création d’un serveur Wordpress avec une stack Docker personnalisée.</p>
+        <p><a href="https://github.com/LouiseLeciak/INCEPTION-42" target="_blank">Voir sur GitHub</a></p>
+      </article>
+    </div>
 
-    <article class="project">
-      <h2>Piscine Python for Datascience - Python</h2>
-      <p>Suite d'exercices en Python afin d'apprendre a maitriser le langage</p>
-      <p>
-        <a href="https://github.com/LouiseLeciak/PYTHON-FOR-DATASCIENCE-42" target="_blank" rel="noopener">Voir sur GitHub</a>
-      </p>
-    </article>
-    
-    <h2>Assembleur</h2>
+    <!-- Colonne droite : Projets persos -->
+    <div class="column">
+      <h2>Projets Perso</h2>
 
-    <article class="project">
-      <h2>libasm - Assembleur</h2>
-      <p>Recoder de fonctions de la librairie standard de C en assembleur linux x64</p>
-      <p>
-        <a href="https://github.com/LouiseLeciak/LIBASM-42" target="_blank" rel="noopener">Voir sur GitHub</a>
-      </p>
-    </article>
+      <article class="project">
+        <h2>Portfolio - HTML/CSS</h2>
+        <p>Mon propre portfolio codé sans framework, responsive et élégant.</p>
+        <p><a href="https://github.com/LouiseLeciak/portfolio" target="_blank">Voir sur GitHub</a></p>
+      </article>
 
-    <h2>Docker</h2>
-
-    <article class="project">
-      <h2>Inception - Docker</h2>
-      <p>Serveur Wordpress configuré manuellement avec dockerfile fait à la main.</p>
-      <p>
-        <a href="https://github.com/LouiseLeciak/INCEPTION-42" target="_blank" rel="noopener">Voir sur GitHub</a>
-      </p>
-    </article>
-  </section>
+      <article class="project">
+        <h2>Multithreading - C++</h2>
+        <p>Utilisation de std::thread et std::async pour des calculs parallèles.</p>
+        <p><a href="https://github.com/LouiseLeciak/multithreading" target="_blank">Voir sur GitHub</a></p>
+      </article>
+    </div>
+    </section>
 
   <footer>
     &copy; 2025 Louise Leciak
